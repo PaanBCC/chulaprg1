@@ -3,7 +3,7 @@
 #There are 2 players.
 #We deal out 2 cards from a deck for both.
 #We compare the result. Player1 wins? Player2 wins? Or it's a tie?
-
+import random
 class playing_card:
     def __init__(self, suit, value):
         #set a card's suit and value
@@ -28,13 +28,16 @@ class deck_cards:
                 self.mycards.append(mycard)
 
     #add: deal a card and remove it from the deck
+    def deal(self):
+        random.randint(deck_cards)
+        print
 
     def print(self):
         for mycard in self.mycards:
             print(mycard)
 
 mydeck = deck_cards()
-#mydeck.print()
+mydeck.print()
 #add: deal 2 cards for player1, 2 cards for player2. Which one wins?
 #Win criteria: any pair is better than 2 non-pair cards
 #If there are 2 pairs, the higher is better. If there are 2 pairs of identical value, it's a tie.
