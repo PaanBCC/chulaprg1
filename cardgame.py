@@ -18,6 +18,7 @@ class playing_card:
 
     def __str__(self):
         return(str(self.value)+" of "+self.suit)
+    
 
 class deck_cards:
     mycards = []
@@ -26,16 +27,21 @@ class deck_cards:
             for card in range(1,14):
                 mycard = playing_card(suit, card)
                 self.mycards.append(mycard)
+    
 
     #add: deal a card and remove it from the deck
     def deal(self):
-        random.randint(deck_cards)
-        print
+        card = random.choice(self.mycards)
+        print(card)
+        self.mycards.remove(card)
+        return card
+ 
 
     def print(self):
         for mycard in self.mycards:
             print(mycard)
-
+            
+deck_cards.deal()
 mydeck = deck_cards()
 mydeck.print()
 #add: deal 2 cards for player1, 2 cards for player2. Which one wins?
