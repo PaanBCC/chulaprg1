@@ -32,7 +32,6 @@ class deck_cards:
     #add: deal a card and remove it from the deck
     def deal(self):
         card = random.choice(self.mycards)
-        print(card)
         self.mycards.remove(card)
         return card
  
@@ -40,10 +39,18 @@ class deck_cards:
     def print(self):
         for mycard in self.mycards:
             print(mycard)
-            
-deck_cards.deal()
-mydeck = deck_cards()
-mydeck.print()
+mydeck = deck_cards()          
+p1c1 = mydeck.deal()          
+p1c2 = mydeck.deal()
+p2c1 = mydeck.deal()
+p2c2 = mydeck.deal()
+
+print("the first player has the following cards:" ,p1c1," ", p1c2)
+print("the first player has the following cards:" ,p2c1," ", p2c2)
+
+print(len(mydeck.mycards))
+
+
 #add: deal 2 cards for player1, 2 cards for player2. Which one wins?
 #Win criteria: any pair is better than 2 non-pair cards
 #If there are 2 pairs, the higher is better. If there are 2 pairs of identical value, it's a tie.

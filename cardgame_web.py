@@ -63,6 +63,8 @@ def play_cards():
     p1c2 = app.deck.deal()
     p2c1 = app.deck.deal()
     p2c2 = app.deck.deal()
+    mybetter = max(p1c1.get_real_val(), p1c2.get_real_val())
+    cbetter = max(p2c1.get_real_val(), )
     #show them
     ret = "<H1>My cards "+str(p1c1)+" "+str(p1c2)+"<br/>"
     ret = ret + "Computer's cards "+str(p2c1)+" "+str(p2c2)+"</H1>"
